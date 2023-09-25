@@ -22,3 +22,6 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('pages.auth.auth-register');
 })->name('register');
+Route::get('/register', function () {
+    return view('pages.auth.auth-register');
+})->name('registear');
