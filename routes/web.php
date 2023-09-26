@@ -26,3 +26,9 @@ Route::get('/register', function () {
 Route::get('/forgot', function () {
     return view('pages.auth.auth-forgot-password');
 })->name('/forgot');
+
+Route::get('/reset-password', function () {
+    return view('pages.auth.auth-reset-password');
+})->name('/reset-password');
+
+
