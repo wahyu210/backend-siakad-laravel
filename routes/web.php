@@ -1,8 +1,8 @@
  <?php
 
-use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Route;
 
-/*
+    /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -12,9 +12,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Route::get('/', function () {
-//     return view('pages.app.dashboard-siakad',['type_menu' => '']);
-// })->name('register');
+
+    Route::get('/', function () {
+        return view('pages.auth.auth-login');
+    });
+    Route::middleware(['auth'])->group(function () {
+        Route::get('home', function () {
+            return view('pages.app.dashboard-siakad', ['type_menu' => '']);
+        })->name('home');
+    });
 
 // Route::get('/login', function () {
 //     return view('pages.auth.auth-login');
@@ -30,5 +36,3 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/reset-password', function () {
 //     return view('pages.auth.auth-reset-password');
 // })->name('/reset-password');
-
-
