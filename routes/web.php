@@ -1,5 +1,6 @@
  <?php
 
+    use App\Http\Controllers\UserController;
     use Illuminate\Support\Facades\Route;
 
     /*
@@ -20,6 +21,7 @@
         Route::get('home', function () {
             return view('pages.app.dashboard-siakad', ['type_menu' => '']);
         })->name('home');
+        route::resource('user', UserController::class);
     });
 
 // Route::get('/login', function () {
