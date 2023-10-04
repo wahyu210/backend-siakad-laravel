@@ -1,5 +1,6 @@
  <?php
 
+    use App\Http\Controllers\Api\ScheduleController;
     use App\Http\Controllers\UserController;
     use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@
         })->name('home');
         route::resource('user', UserController::class);
     });
+
 
 // Route::get('/login', function () {
 //     return view('pages.auth.auth-login');
